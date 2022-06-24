@@ -1,5 +1,6 @@
 import os
 import shutil
+from time import sleep
 
 extensions = ['.jpg', '.png', '.jpeg', '.mp4', '.mp3', '.wav', '.zip', '.rar', '.xlsx', '.pptx', '.pdf']
 SESSION = os.getlogin()
@@ -39,6 +40,8 @@ class Delete_files():
 
 if __name__ == '__main__':
     file_path = create_desktop_folder(DESKTOP_PATH)
+    print('The Script is working, check your Desktop on 30 seconds')
+    sleep(30)
     for a in range(len(extensions)):
         delete_files = Delete_files(extensions[a])
         delete_files.delete_files(file_path, DOWNLOAD_PATH)
