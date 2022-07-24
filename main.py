@@ -21,7 +21,6 @@ class Delete_files():
     def __init__(self, extension):
         self.extension = extension
 
-
     def delete_files(self, file_path, DOWLOAD_PATH):
         path = file_path + self.extension + '/'
         if not os.path.exists(path):
@@ -38,10 +37,14 @@ class Delete_files():
                     pass
 
 
-if __name__ == '__main__':
+def main():
     file_path = create_desktop_folder(DESKTOP_PATH)
     print('The Script is working, check your Desktop on 30 seconds')
     sleep(30)
     for a in range(len(extensions)):
         delete_files = Delete_files(extensions[a])
         delete_files.delete_files(file_path, DOWNLOAD_PATH)
+
+
+if __name__ == '__main__':
+    main()
