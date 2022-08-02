@@ -2,7 +2,8 @@ import os
 import shutil
 from time import sleep
 
-extensions = ['.jpg', '.png', '.jpeg', '.mp4', '.mp3', '.wav', '.zip', '.rar', '.xlsx', '.pptx', '.pdf', 'exe']
+extensions = ['.jpg', '.png', '.jpeg', '.mp4', '.mp3', '.wav', '.zip', '.rar', '.xlsx', '.pptx', '.pdf', 'exe', 'svg',
+              'jar']
 SESSION = os.getlogin()
 DESKTOP_PATH = f"C:/Users/{SESSION}/Desktop/"
 DOWNLOAD_PATH = f"C:/Users/{SESSION}/Downloads"
